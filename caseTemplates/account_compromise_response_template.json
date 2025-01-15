@@ -1,0 +1,46 @@
+{
+    "name": "Account Compromise Response Template",
+    "description": "사용자 계정 탈취 또는 무단 로그인 사건에 대한 분석/대응 템플릿",
+    "severity": 3,
+    "tlp": 2,
+    "pap": 2,
+    "tasks": [
+      {
+        "title": "01 - 사례 접수 및 피해 범위 확인",
+        "description": "침해/무단 로그인 의심 사례 접수 후, 해당 계정의 활동 이력 및 영향 범위 파악",
+        "order": 1,
+        "mandatory": true
+      },
+      {
+        "title": "02 - 로그 분석 및 증거 수집",
+        "description": "SIEM/시스템 로그 등을 분석하여 의심 세션, IP, 로그인 시간, 행동 내역 등 조사",
+        "order": 2,
+        "mandatory": true
+      },
+      {
+        "title": "03 - 추가 침투/이동 흔적 조사",
+        "description": "권한 상승, 내부 네트워크 이동, 민감 정보 접근 등 흔적을 찾고, 관련 계정/호스트 조사",
+        "order": 3,
+        "mandatory": false
+      },
+      {
+        "title": "04 - 계정 잠금 및 비밀번호 초기화",
+        "description": "탈취 의심 계정(및 유사 계정) 잠금, MFA(다중 인증) 적용, 비밀번호 강제 변경",
+        "order": 4,
+        "mandatory": true
+      },
+      {
+        "title": "05 - 2차 조치 및 복구",
+        "description": "침해된 자산 격리, 악성코드 제거, 감사 모드 강화 등 추가 보안 조치 시행",
+        "order": 5,
+        "mandatory": false
+      },
+      {
+        "title": "06 - 최종 보고서 및 후속 모니터링",
+        "description": "사건 개요, 공격 기법, 영향 범위, 대응 조치, 재발 방지대책을 정리하여 보고",
+        "order": 6,
+        "mandatory": true
+      }
+    ]
+  }
+  

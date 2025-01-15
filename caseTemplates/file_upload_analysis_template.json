@@ -1,0 +1,45 @@
+{
+  "name": "File Upload Analysis Template",
+  "description": "외부 혹은 내부 사용자가 악성 파일을 업로드했을 때 대응하는 분석 및 예방 절차 템플릿",
+  "severity": 2,
+  "tlp": 2,
+  "pap": 2,
+  "tasks": [
+    {
+      "title": "01 - 파일 업로드 감지 및 분류",
+      "description": "사용자가 업로드한 파일이 의심스럽거나 정책 위반 파일인지 분류하고, 기본 케이스 정보(담당자/심각도/TLP) 설정",
+      "order": 1,
+      "mandatory": true
+    },
+    {
+      "title": "02 - 파일 해시 및 메타정보 확인",
+      "description": "MD5/SHA256 등 해시 계산, 파일 크기 및 형식을 확인하여 악성 가능성 여부를 1차 식별",
+      "order": 2,
+      "mandatory": true
+    },
+    {
+      "title": "03 - 정적/동적 분석 (Sandbox 등)",
+      "description": "Cortex Sandbox, VirusTotal, 백신, YARA 등 도구를 이용해 파일을 분석하고, 악성일 경우 즉시 격리 조치",
+      "order": 3,
+      "mandatory": false
+    },
+    {
+      "title": "04 - 사용자 및 시스템 권한 제한",
+      "description": "해당 파일을 업로드한 사용자 또는 관련 시스템 계정을 잠금/격리하고, 추가 피해 확산을 방지",
+      "order": 4,
+      "mandatory": false
+    },
+    {
+      "title": "05 - 조직 전파 및 보안 정책 보완",
+      "description": "악성 파일 유형, 탐지 방식, 대응 과정을 사내에 공유하고, 향후 재발 방지를 위한 업로드 정책/ACL 등을 개선",
+      "order": 5,
+      "mandatory": false
+    },
+    {
+      "title": "06 - 최종 보고서 작성 및 케이스 종료",
+      "description": "분석 및 조치 결과를 정리하고 관련 부서에 보고. 최종적으로 케이스를 종료",
+      "order": 6,
+      "mandatory": true
+    }
+  ]
+}
